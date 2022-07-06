@@ -19,6 +19,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @MappedSuperclass
+@EntityListeners(value = AuditingEntityListener.class)
 public abstract class BaseEntity implements Serializable {
     @Id
     @GeneratedValue(generator = "UUID")

@@ -12,7 +12,8 @@ import javax.persistence.Table;
 @Table(name = "attachments")
 @EntityListeners(value = AuditingEntityListener.class)
 public class AttachmentEntity extends BaseEntity{
+    private String originalName;
     private String name;
     private long size;
-    private String type;
+    private String contentType;
 }

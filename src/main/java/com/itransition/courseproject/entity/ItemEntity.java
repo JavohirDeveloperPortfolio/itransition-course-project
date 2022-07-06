@@ -13,12 +13,16 @@ import java.util.Set;
 public class ItemEntity extends BaseEntity{
     private String name;
 
+    @ManyToOne
+    private CollectionEntity collection;
+
     @OneToMany(fetch = FetchType.EAGER)
     private Set<TagEntity> tags;
 
     @OneToMany(fetch = FetchType.EAGER)
     private Set<CommentEntity> comments;
 
-    @ManyToOne
-    private CollectionEntity collection;
+
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set<DataEntity> itemsData;
 }

@@ -15,4 +15,12 @@ import javax.persistence.Table;
 public class TopicEntity extends BaseEntity {
     @Column(nullable = false)
     private String name;
+
+    public TopicEntity(String name) {
+        this.name = name;
+    }
+
+    public TopicEntity() {
+
+    }
 }
