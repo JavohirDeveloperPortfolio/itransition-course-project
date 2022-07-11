@@ -150,9 +150,9 @@ public class CollectionServiceImpl implements CollectionService {
     }
 
     @Override
-    public List<CollectionResponse> getCollectionByUserId(UUID id) {
+    public List<CollectionResponse> getCollectionByUserId(String email) {
         return modelMapper.map(
-                collectionRepository.findByCreatedById(id),
+                collectionRepository.findByCreatedById(email),
                 new TypeToken<List<CollectionResponse>>(){}.getType());
     }
 

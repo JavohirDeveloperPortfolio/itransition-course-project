@@ -1,6 +1,5 @@
 package com.itransition.courseproject.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.itransition.courseproject.dto.response.UserBasicResponseTo;
 import lombok.Data;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;

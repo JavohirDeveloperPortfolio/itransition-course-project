@@ -4,7 +4,6 @@ import com.itransition.courseproject.dto.request.LoginDto;
 import com.itransition.courseproject.dto.request.UserRegisterDto;
 import com.itransition.courseproject.dto.response.ErrorResponse;
 import com.itransition.courseproject.dto.response.UserBasicResponseTo;
-import com.itransition.courseproject.exception.WrongLoginPasswordException;
 import com.itransition.courseproject.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

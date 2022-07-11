@@ -87,9 +87,9 @@ public class CollectionController {
         return ResponseEntity.ok(collectionServiceImpl.getCollection(id));
     }
 
-    @GetMapping("/getByUserId/{id}")
-    public ResponseEntity<?> getCollectionByUserId(@PathVariable(name = "id") UUID id){
-        return ResponseEntity.ok(collectionServiceImpl.getCollectionByUserId(id));
+    @GetMapping("/getByUsername/{email}")
+    public ResponseEntity<?> getCollectionByUserId(@PathVariable(name = "email") String email){
+        return ResponseEntity.ok(collectionServiceImpl.getCollectionByUserId(email));
     }
 
     @GetMapping("/getByName/{name}")

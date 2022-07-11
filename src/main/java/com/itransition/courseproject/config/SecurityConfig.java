@@ -78,7 +78,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    AuditorAware<UUID> auditorAware(){
+    AuditorAware<String> auditorAware(){
         return new SpringSecurityAuditingImpl();
     }
 }

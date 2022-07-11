@@ -2,6 +2,12 @@
   "properties":{
     "id": {
       "type": "keyword"
+    },
+    "name": {
+      "type": "text"
+    },
+    "data": {
+      "type": "text"
     }
   }
 }

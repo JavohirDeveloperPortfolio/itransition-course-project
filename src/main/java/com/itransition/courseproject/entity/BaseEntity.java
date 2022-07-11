@@ -41,9 +41,9 @@ public abstract class BaseEntity implements Serializable {
     @JsonIgnore
     @CreatedBy
     @Column(updatable = false)
-    private UUID createdById;
+    private String createdBy;
 
     @JsonIgnore
     @LastModifiedBy
-    private UUID updateById;
+    private String updateBy;
 }

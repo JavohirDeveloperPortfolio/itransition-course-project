@@ -1,5 +1,6 @@
 package com.itransition.courseproject.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class CollectionEntity extends BaseEntity{
     private TopicEntity topic;
 
     @OneToOne
+    @JsonIgnore
     private AttachmentEntity attachment;
 
     @ManyToMany

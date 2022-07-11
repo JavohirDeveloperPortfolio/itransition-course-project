@@ -1,23 +1,17 @@
 package com.itransition.courseproject.config;
-
-import com.itransition.courseproject.entity.UserEntity;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Optional;
-import java.util.UUID;
 
-class SpringSecurityAuditingImpl implements AuditorAware<UUID> {
+class SpringSecurityAuditingImpl implements AuditorAware<String> {
     @Override
-    public Optional<UUID> getCurrentAuditor() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
-        if(authentication != null && authentication.getPrincipal() instanceof UserEntity)
-        {
-            UserEntity user = (UserEntity) authentication.getPrincipal();
-            return Optional.of(user.getId());
-        }
-        return Optional.empty();
+    public Optional<String> getCurrentAuditor() {
+        Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(principal instanceof UserDetails)
+            return Optional.of(((UserDetails) principal).getUsername());
+        return  Optional.of(principal.toString());
     }
 }

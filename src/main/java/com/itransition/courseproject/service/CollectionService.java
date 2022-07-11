@@ -30,7 +30,7 @@ public interface CollectionService {
     CollectionEntity deleteCollection(UUID id);
     List<CollectionResponse> getCollectionAll();
     CollectionEntity getCollection(UUID id);
-    List<CollectionResponse> getCollectionByUserId(UUID id);
+    List<CollectionResponse> getCollectionByUserId(String email);
     List<CollectionResponse> getCollection(String name);
 //    List<CollectionResponse> getCollectionByTopicName(String name);
 

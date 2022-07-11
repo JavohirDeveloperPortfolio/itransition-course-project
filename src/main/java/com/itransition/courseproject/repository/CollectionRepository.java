@@ -8,6 +8,6 @@ import java.util.List;
 import java.util.UUID;
 
 public interface CollectionRepository extends JpaRepository<CollectionEntity, UUID> {
-    @Query("select c from CollectionEntity c where c.createdById = ?1")
-    List<CollectionEntity> findByCreatedById(UUID userId);
+    @Query("select c from CollectionEntity c where c.createdBy = ?1")
+    List<CollectionEntity> findByCreatedById(String email);
 }
